@@ -7,7 +7,7 @@ describe('Testes da tela de produtos do site', () => {
         cy.intercept({ resourceType: /xhr|fetch/ }, {log: false})
       })
 
-    it('Teste login', () => {
+    it('Validar a adição de um produto ao carrinho', () => {
         cy.get('[data-test="shopping-cart-badge"]').should('not.exist')
         
         cy.get('[data-test="add-to-cart-sauce-labs-backpack"]').click()
